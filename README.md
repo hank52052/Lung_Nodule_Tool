@@ -8,7 +8,7 @@ Before running the tool, make sure you have all the required Python packages ins
 
 ```bash
 pip install -r requirements.txt
-
+```
 🔎 You can find the requirements.txt file in this repository.
 
 📁 Folder Structure
@@ -22,7 +22,9 @@ Any other supporting files
 
 🚀 How to Run
 Once everything is in the same directory and dependencies are installed, use the following command to launch the app:
+```bash
 python.exe -m streamlit run Nodule_Tool.py
+```
 ⚠️ Make sure you are using the correct Python environment (conda or venv) that has the required packages installed.
 
 ❗ Notes
