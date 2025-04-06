@@ -14,11 +14,9 @@ pip install -r requirements.txt
 ## 📁 Folder Structure
 To run the program successfully, all project files must be placed in the same folder, including:
 
-Nodule_Tool.py
-
-Folders like dependence, nodule_show, etc.
-
-Any other supporting files
+- `Nodule_Tool.py`
+- `nodule_show/` folder
+- Any other supporting files
 
 ## 🚀 How to Run
 Once everything is in the same directory and dependencies are installed, use the following command to launch the app:
