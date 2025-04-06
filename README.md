@@ -1,6 +1,48 @@
-# Lung_Nodule_Tool
+# Lung Nodule Diagnosis Tool
 
-A pulmonary nodule diagnostic tool that allows input of CT images and the nodule ROI to determine whether the nodule is malignant.
+This tool provides an AI-based workflow for lung nodule visualization and malignancy prediction using chest CT scans.
+
+---
+
+## 🔍 Description
+
+Users can upload:
+
+- A **3D CT image** file (`.nrrd`, `.nii`, or `.nii.gz`) of the patient’s lung
+- A corresponding **contour file** (`.nrrd`, `.nii`, or `.nii.gz`) marking the suspected nodule region
+
+Once uploaded, the system will:
+
+- Automatically apply **lung window display**
+- Show the **CT slice with overlaid contour**
+- Allow **Z-axis scrolling** (slice navigation for 3D volume)
+- Allow **contour toggle** (show/hide)
+- Perform **malignancy prediction** (Benign vs Malignant)
+
+---
+
+## 📦 Input Format
+
+- CT scan: `image.nrrd`
+- Contour: `roi_1.nrrd` (or any mask with same dimensions)
+
+---
+
+## 🚀 Prediction Output
+
+- Visual result with nodule location highlighted
+- Confidence percentage of:
+  - **Benign nodule**
+  - **Malignant nodule**
+
+---
+
+## 💻 Compatibility
+
+Runs directly in the browser on:
+- Desktop
+- Tablet
+- Mobile
 
 ## 📦 Requirements
 
@@ -30,4 +72,4 @@ Large libraries such as PyTorch binaries are not included in this repository due
 Please install them via pip using the requirements.txt.
 
 ## 📜 License
-This project is for non-commercial use only, such as academic projects or competitions.
+This project is for **non-commercial use only**, such as academic projects or competitions.
