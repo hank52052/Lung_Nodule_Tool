@@ -21,35 +21,9 @@ import nrrd
 
 torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)]
 
-# ------------------------------------------------------------
-# (可視情況保留或關閉的檢查機制)
-# pid = os.getpid()
-# CHECK_INTERVAL = 5
-# def check_if_closed():
-#     time.sleep(10)
-#     while True:
-#         try:
-#             asyncio.run(asyncio.sleep(0))
-#         except:
-#             os.kill(pid, signal.SIGTERM)
-#             sys.exit()
-#         time.sleep(CHECK_INTERVAL)
-# threading.Thread(target=check_if_closed, daemon=True).start()
-# ------------------------------------------------------------
 def make_model_input(ct_array, roi_array, side=64):
-    """
-    將 3D CT + ROI 轉成 2D 影像（大小 192×192），
-    擷取 ROI 周邊 64×64 區塊連續 9 層，排成 3×3 block。
-    不做 zoom、不做 windowing。
-    """
-    # side=64，建立一個空的(3*64, 3*64) 來放 9 層
-    draw = np.zeros((side*3, side*3), dtype=np.uint8)
-
-    # 找 ROI = 1 的最小座標 (y, x, z)
-    # np.where(...) 回傳 (ycoords, xcoords, zcoords)
     coords = np.where(roi_array > 0)
     if len(coords[0]) == 0:
-        # 如果完全沒ROI，就直接回傳全黑
         return draw
 
     mi_y = np.min(coords[0])
@@ -352,9 +326,6 @@ with col1:
     else:
         st.info("請同時上傳 CT 與 Contour 的檔案，以查看影像。")
 
-# ------------------ 右欄：兩類分類邏輯 + 結果 ------------------
-# ------------------ 右欄：兩類分類邏輯 + 結果 ------------------
-# 這裡只要「開始預測」時先呼叫 make_model_input，再餵您的模型
 with col2:
     st.markdown("<div style='margin-top: 50px;'></div>", unsafe_allow_html=True)
     st.markdown(
