@@ -73,4 +73,5 @@ Please install them via pip using the requirements.txt.
 
 ## 📜 License
 This project is for **non-commercial use only**, such as academic projects or competitions.
-![螢幕擷取畫面 2025-04-07 014730](https://github.com/user-attachments/assets/26d26185-5b81-470e-98e1-4a6d44b4918f)
+![下載 (2)](https://github.com/user-attachments/assets/5d50c434-58b0-4872-bfd1-aa5e32c67853)
+
