@@ -379,8 +379,8 @@ with col2:
 st.markdown(
     '''
     <div class="footer">
-        © 2025 CMU Artificial Intelligence & Bioimaging Lab, Kaohsiung Veterans General Hospital. All rights reserved.<br>
-        Developed by: Chen-Hao Peng & Da-Chuan Cheng & Kuan-Jung Chen & Ke-An Hong
+        © 2025 Artificial Intelligence & Bioimaging Lab. All rights reserved.<br>
+        Developed by: XXX & XXX & XXX & XXX
     </div>
     ''', 
     unsafe_allow_html=True
